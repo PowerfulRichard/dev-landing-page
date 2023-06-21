@@ -5,23 +5,47 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Dinesh Pandiyan | Awesome Dev</title>
+	<title>BH6AEX</title>
 
 	<link rel="icon" href="favicon.ico" type="image/png" />
 
 	<link href="https://fonts.googleapis.com/css?family=Reem+Kufi|Roboto:300" rel="stylesheet">
-	<link href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
+	<link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/5.13.1/css/all.css" type="text/css" rel="stylesheet" />
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/themes/indigo-white.css">
-	<!-- <link rel="stylesheet" href="css/themes/green-white.css"> -->
-	<!-- <link rel="stylesheet" href="css/themes/red-white.css"> -->
-	<!-- <link rel="stylesheet" href="css/themes/grey-white.css"> -->
-	<!-- <link rel="stylesheet" href="css/themes/white-indigo.css"> -->
-	<!-- <link rel="stylesheet" href="css/themes/white-blue.css"> -->
-	<!-- <link rel="stylesheet" href="css/themes/white-grey.css"> -->
-	<!-- <link rel="stylesheet" href="css/themes/white-red.css"> -->
-	<!-- <link rel="stylesheet" href="css/themes/yellow-black.css"> -->
+
+	<style id="theme-styles">
+		/* 默认主题 */
+		@import url("css/themes/indigo-white.css");
+
+		/* 其他主题 */
+		/* <link rel="stylesheet" href="css/themes/grey-white.css"> */
+		/* <link rel="stylesheet" href="css/themes/white-indigo.css"> */
+		/* <link rel="stylesheet" href="css/themes/white-blue.css"> */
+		/* <link rel="stylesheet" href="css/themes/white-grey.css"> */
+	</style>
+
+	<script>
+		(function() {
+			var themes = [
+				"css/themes/indigo-white.css",
+				"css/themes/grey-white.css",
+				"css/themes/white-indigo.css",
+				"css/themes/white-blue.css",
+				"css/themes/white-grey.css"
+			];
+
+			var currentThemeIndex = 0;
+			var themeStyle = document.getElementById("theme-styles");
+
+			function changeTheme() {
+				currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+				themeStyle.innerHTML = "@import url('" + themes[currentThemeIndex] + "');";
+			}
+
+			setInterval(changeTheme, 20000); // 切换主题的时间间隔（单位：毫秒）
+		})();
+	</script>
 </head>
 <body>
 	<main>
